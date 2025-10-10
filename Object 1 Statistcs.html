@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object 1 Developer: 3-Year Market Performance</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'object1-primary': '#4f46e5', // Indigo
+                        'object1-secondary': '#f97316', // Orange
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Load Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        
+        .chart-container {
+            position: relative;
+            height: 400px; /* Fixed height for consistent chart display */
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans p-4 md:p-8">
+
+    <div id="app-container" class="max-w-7xl mx-auto">
+
+        <!-- Header -->
+        <header class="text-center mb-10 p-6 bg-white rounded-xl shadow-lg">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-2">
+                <span class="text-object1-primary">Object 1 Developer</span>: 3-Year Growth Analysis
+            </h1>
+            <p class="text-lg text-gray-600">Strategic Performance Analysis & Developer Benchmarking (2023 - 2025)</p>
+            <!-- PRESENTATION INFO ADDED -->
+            <p class="mt-4 text-xl font-semibold text-object1-secondary border-t pt-4">Presented by: Basem Al Salahi - Sales Manager</p>
+        </header>
+
+        <!-- Object 1 Spotlight - Key Performance Snapshot (2025 vs 2024) -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">🚀 Object 1: Momentum Snapshot (2025 vs 2024)</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                
+                <!-- 1. Total Sales Value -->
+                <div class="bg-white p-4 md:p-6 rounded-xl shadow-md border-b-4 border-object1-primary hover:shadow-xl transition duration-300">
+                    <p class="text-sm font-medium text-gray-500">Total Sales Value</p>
+                    <p class="text-xl md:text-3xl font-bold text-object1-primary">AED 1.24 B</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-xs md:text-sm font-semibold text-green-600 mr-1 flex items-center">
+                            <svg class="w-3 h-3 md:w-4 md:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            +127.42%
+                        </span>
+                        <span class="text-xs text-gray-500 hidden md:inline">vs 2024 (AED 545.30 M)</span>
+                    </div>
+                </div>
+                
+                <!-- 2. Sales Volume (Oqood) -->
+                <div class="bg-white p-4 md:p-6 rounded-xl shadow-md border-b-4 border-object1-secondary hover:shadow-xl transition duration-300">
+                    <p class="text-sm font-medium text-gray-500">Sales Volume (Oqood)</p>
+                    <p class="text-xl md:text-3xl font-bold text-object1-secondary">1,177 Units</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-xs md:text-sm font-semibold text-green-600 mr-1 flex items-center">
+                            <svg class="w-3 h-3 md:w-4 md:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            +87.72%
+                        </span>
+                        <span class="text-xs text-gray-500 hidden md:inline">vs 2024 (627 Units)</span>
+                    </div>
+                </div>
+
+                <!-- 3. Total Built-up Area -->
+                <div class="bg-white p-4 md:p-6 rounded-xl shadow-md border-b-4 border-purple-500 hover:shadow-xl transition duration-300">
+                    <p class="text-sm font-medium text-gray-500">Total Built-up Area</p>
+                    <p class="text-xl md:text-3xl font-bold text-purple-600">875,063 sq ft</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-xs md:text-sm font-semibold text-green-600 mr-1 flex items-center">
+                            <svg class="w-3 h-3 md:w-4 md:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            +87.03%
+                        </span>
+                        <span class="text-xs text-gray-500 hidden md:inline">vs 2024 (467,846 sq ft)</span>
+                    </div>
+                </div>
+                
+                <!-- 4. Total Sales Rank -->
+                <div class="bg-white p-4 md:p-6 rounded-xl shadow-md border-b-4 border-green-500 hover:shadow-xl transition duration-300">
+                    <p class="text-sm font-medium text-gray-500">Total Sales Rank</p>
+                    <p class="text-xl md:text-3xl font-bold text-green-600">#27</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-xs md:text-sm font-semibold text-green-600 mr-1 flex items-center">
+                            <svg class="w-3 h-3 md:w-4 md:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            Improved by 6
+                        </span>
+                        <span class="text-xs text-gray-500 hidden md:inline">from #33 in 2024</span>
+                    </div>
+                </div>
+                
+                <!-- 5. Avg. Price per Sq Ft -->
+                <div class="bg-white p-4 md:p-6 rounded-xl shadow-md border-b-4 border-pink-500 hover:shadow-xl transition duration-300">
+                    <p class="text-sm font-medium text-gray-500">Avg. Price per Sq Ft</p>
+                    <p class="text-xl md:text-3xl font-bold text-pink-600">AED 1,461</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-xs md:text-sm font-semibold text-green-600 mr-1 flex items-center">
+                            <svg class="w-3 h-3 md:w-4 md:h-4 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                            +21.45%
+                        </span>
+                        <span class="text-xs text-gray-500 hidden md:inline">vs 2024 (AED 1,203)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chart 3: Market Positioning -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">💰 Market Positioning: Avg Price per Sq Ft (2025)</h2>
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+                <div class="chart-container h-96">
+                    <canvas id="avgPriceChart"></canvas>
+                </div>
+                <p class="text-sm text-gray-600 mt-4 text-center">This chart positions Object 1's pricing relative to key competitors in 2025.</p>
+            </div>
+        </section>
+
+        <!-- Detailed Comparison Table (Now 3 years) -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">📈 Object 1: 3-Year Metric Comparison (2023 - 2025)</h2>
+            <div class="overflow-x-auto bg-white rounded-xl shadow-lg">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4">Metric</th>
+                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">2023 Data</th>
+                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">2024 Data</th>
+                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">2025 Data</th>
+                            <!-- Only Change (25 vs 24) remains -->
+                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Change (25 vs 24)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="comparisonTableBody" class="divide-y divide-gray-200">
+                        <!-- Table content populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Footer / Source -->
+        <footer class="text-center text-sm text-gray-500 py-4 border-t mt-8">
+            <!-- PRESENTATION INFO ADDED WITH ICONS -->
+            <div class="mb-4 text-gray-800 font-medium">
+                <p class="text-base font-semibold">Presented by: Basem Al Salahi - Sales Manager</p>
+                <div class="mt-2 flex justify-center space-x-6 items-center">
+                    <!-- Phone Icon (Contact) -->
+                    <p class="text-sm">
+                        <span class="text-object1-primary font-bold inline-flex items-center">
+                            <!-- Phone Icon SVG (Lucide: Phone) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 inline-block mr-1 align-middle"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 3.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            [Your Phone Number Here]
+                        </span>
+                    </p>
+                    
+                    <!-- Instagram Icon (Lucide: Instagram) -->
+                    <p class="text-sm">
+                        <span class="text-object1-primary font-bold inline-flex items-center">
+                            <!-- Instagram Icon SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 inline-block mr-1 align-middle"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+                            @[Your Instagram Handle Here]
+                        </span>
+                    </p>
+                </div>
+            </div>
+            Data Source: Property Monitor > Dubai Real Estate Developers Statistics (7-Oct-2023, 7-Oct-2024 & 7-Oct-2025). Note: All rankings are for Total Sales Rank unless specified.
+        </footer>
+    </div>
+
+    <script>
+        /**
+         * Helper function to format numbers for display.
+         */
+        const formatNumber = (value, isCurrency = false, isSqFt = false) => {
+            if (value === null || value === undefined) return 'N/A';
+            if (typeof value === 'string' && value.includes('N/A')) return value;
+
+            const num = Number(value);
+            if (isNaN(num)) return 'N/A';
+
+            let formatted;
+            if (num >= 1e9) {
+                formatted = (num / 1e9).toFixed(2) + ' B';
+            } else if (num >= 1e6) {
+                formatted = (num / 1e6).toFixed(2) + ' M';
+            } else {
+                formatted = Math.round(num).toLocaleString();
+            }
+
+            if (isCurrency) {
+                return `AED ${formatted}`;
+            } else if (isSqFt) {
+                return `${formatted} sq ft`;
+            }
+            return formatted;
+        };
+        
+        /**
+         * Calculates percentage change.
+         */
+        const calculateChange = (current, previous) => {
+            if (previous === 0 || previous === null || previous === undefined || isNaN(previous) || current === null || current === undefined || isNaN(current)) {
+                return { value: 'N/A', percent: 'N/A' };
+            }
+            
+            const diff = current - previous;
+            if (previous === 0) return { value: diff.toLocaleString(), percent: 'N/A' };
+            
+            const percent = ((diff / previous) * 100).toFixed(2);
+            return {
+                value: diff.toLocaleString(),
+                percent: `${diff > 0 ? '+' : ''}${percent}%`,
+                isPositive: diff > 0
+            };
+        };
+
+        /**
+         * Helper function to determine chart colors based on developer name.
+         */
+        const getColor = (name, alpha) => name === 'Object 1' ? `rgba(79, 70, 229, ${alpha})` : `rgba(107, 114, 128, ${alpha})`;
+
+        // Raw data including the 2023 values for Object 1
+        const infographicData = {
+          "sourceDate2023": "7-Oct-2023",
+          "sourceDate2024": "7-Oct-2024",
+          "sourceDate2025": "7-Oct-2025",
+          "object1Name": "Object 1",
+          "object1Metrics": {
+                "Volume2023": 16,
+                "Volume2024": 627,
+                "Volume2025": 1177,
+                "VolumeRank2023": 96,
+                "VolumeRank2024": 18,
+                "VolumeRank2025": 16,
+                "SalesValue2023": 17000000,
+                "SalesValue2024": 545298602,
+                "SalesValue2025": 1240136857,
+                "SalesRank2023": 95,
+                "SalesRank2024": 33,
+                "SalesRank2025": 27,
+                "BuiltUpArea2023": 14123,
+                "BuiltUpArea2024": 467846,
+                "BuiltUpArea2025": 875063,
+                "AvgPriceUnit2023": 1108719,
+                "AvgPriceUnit2024": 869694,
+                "AvgPriceUnit2025": 1053642,
+                "AvgPriceSqFt2023": 1260,
+                "AvgPriceSqFt2024": 1203,
+                "AvgPriceSqFt2025": 1461
+          },
+          "developerComparisonData": [
+            { "Name": "Emaar", "SalesValue2025": 16534405231, "AvgPricePerSqFt2025": 2472 },
+            { "Name": "Sobha Group", "SalesValue2025": 14870135999, "AvgPricePerSqFt2025": 2304 },
+            { "Name": "DAMAC Properties", "SalesValue2025": 9502041793, "AvgPricePerSqFt2025": 1961 },
+            { "Name": "Danube Properties", "SalesValue2025": 4605638165, "AvgPricePerSqFt2025": 2274 },
+            { "Name": "Binghatti", "SalesValue2025": 14780677054, "AvgPricePerSqFt2025": 2084 },
+            { "Name": "Samana Developers", "SalesValue2025": 3530497592, "AvgPricePerSqFt2025": 1520 },
+            { "Name": "Azizi", "SalesValue2025": 1846975381, "AvgPricePerSqFt2025": 1700 },
+            // Object 1 data must be included for the chart
+            { "Name": "Object 1", "SalesValue2025": 1240136857, "AvgPricePerSqFt2025": 1461 }
+          ]
+        };
+
+        /**
+         * Populates the three-year comparison table.
+         */
+        function populateComparisonTable(data) {
+            const metrics = data.object1Metrics;
+            const tableBody = document.getElementById('comparisonTableBody');
+            tableBody.innerHTML = ''; // Clear existing rows
+
+            const tableRows = [
+                {
+                    label: 'Total Sales Value (AED)',
+                    key: 'SalesValue',
+                    isCurrency: true,
+                    formatValue: (v) => formatNumber(v, true)
+                },
+                {
+                    label: 'No. of initial sale - oqood (Units)',
+                    key: 'Volume',
+                    isCurrency: false,
+                    formatValue: (v) => formatNumber(v)
+                },
+                {
+                    label: 'Total Built-up Area (sq ft)',
+                    key: 'BuiltUpArea',
+                    isCurrency: false,
+                    formatValue: (v) => formatNumber(v, false, true),
+                    style: 'text-purple-600'
+                },
+                {
+                    label: 'Average sales (AED/sq ft)',
+                    key: 'AvgPriceSqFt',
+                    isCurrency: true,
+                    formatValue: (v) => formatNumber(v, true),
+                    style: 'text-pink-600'
+                },
+                {
+                    label: 'Average Sales (AED/Unit)',
+                    key: 'AvgPriceUnit',
+                    isCurrency: true,
+                    formatValue: (v) => formatNumber(v, true)
+                },
+                {
+                    label: 'Total Sales Rank',
+                    key: 'SalesRank',
+                    isCurrency: false,
+                    isRank: true,
+                    formatValue: (v) => `#${v}`,
+                    style: 'text-object1-primary'
+                },
+                {
+                    label: 'Total Volume Rank',
+                    key: 'VolumeRank',
+                    isCurrency: false,
+                    isRank: true,
+                    formatValue: (v) => `#${v}`
+                }
+            ];
+
+            tableRows.forEach(rowInfo => {
+                const val23 = metrics[`${rowInfo.key}2023`];
+                const val24 = metrics[`${rowInfo.key}2024`];
+                const val25 = metrics[`${rowInfo.key}2025`];
+
+                // Calculation for 2025 vs 2024 (the only change metric remaining)
+                const change25_24 = rowInfo.isRank
+                    ? { percent: val24 - val25, isPositive: (val24 - val25) > 0 }
+                    : calculateChange(val25, val24);
+
+                const getChangeText = (change, isRank) => {
+                    if (change.percent === 'N/A') return '<span class="text-gray-500">N/A</span>';
+                    
+                    if (isRank) {
+                        // For Rank, a positive difference means improvement (e.g., 33 - 27 = +6 improvement)
+                        const improvement = change.percent > 0 ? `Improved by ${change.percent}` : change.percent < 0 ? `Dropped by ${Math.abs(change.percent)}` : 'No Change';
+                        const color = change.percent > 0 ? 'text-green-600' : change.percent < 0 ? 'text-red-600' : 'text-gray-500';
+                        return `<span class="font-medium ${color}">${improvement}</span>`;
+                    } else {
+                        // For values, use the calculated percentage
+                        const color = change.isPositive ? 'text-green-600' : 'text-red-600';
+                        return `<span class="font-medium ${color}">${change.percent}</span>`;
+                    }
+                };
+                
+                const row = tableBody.insertRow();
+                row.className = 'hover:bg-indigo-50/50 transition duration-150';
+
+                row.innerHTML = `
+                    <td class="px-6 py-4 whitespace-nowrap font-semibold ${rowInfo.style || 'text-gray-800'}">${rowInfo.label}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-right">${rowInfo.formatValue(val23)}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-right">${rowInfo.formatValue(val24)}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-right">${rowInfo.formatValue(val25)}</td>
+                    <!-- Change (25 vs 24) is the only change column -->
+                    <td class="px-6 py-4 whitespace-nowrap text-right">${getChangeText(change25_24, rowInfo.isRank)}</td>
+                `;
+            });
+        }
+
+        /**
+         * Initializes and renders the remaining Chart.js chart.
+         */
+        function initializeCharts(data) {
+            const developerData = data.developerComparisonData;
+            
+            // Sort data to put Object 1 prominently (e.g., at the start or based on rank, but here we keep it simple for visualization)
+            // Let's sort by AvgPricePerSqFt2025 for better positioning visualization
+            developerData.sort((a, b) => b.AvgPricePerSqFt2025 - a.AvgPricePerSqFt2025);
+
+            const chartLabels = developerData.map(d => d.Name);
+            const avgPricePerSqFt2025 = developerData.map(d => d.AvgPricePerSqFt2025);
+
+            // --- Chart 3: Market Positioning (Avg Price Per Sq Ft 2025) ---
+            const ctxAvgPrice = document.getElementById('avgPriceChart').getContext('2d');
+            new Chart(ctxAvgPrice, {
+                type: 'bar',
+                data: {
+                    labels: chartLabels,
+                    datasets: [
+                        {
+                            label: 'Avg. Price Per Sq Ft (AED)',
+                            data: avgPricePerSqFt2025,
+                            backgroundColor: chartLabels.map(name => name === 'Object 1' ? 'rgba(79, 70, 229, 0.9)' : 'rgba(52, 211, 153, 0.6)'),
+                            borderColor: chartLabels.map(name => name === 'Object 1' ? 'rgba(79, 70, 229, 1)' : 'rgba(52, 211, 153, 1)'),
+                            borderWidth: 1,
+                            borderRadius: 8
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: '2025 Market Positioning: Average Price per Sq Ft (AED)', font: { size: 16, weight: 'bold' } },
+                        legend: { display: false },
+                        tooltip: { callbacks: { label: (context) => `${context.dataset.label}: AED ${context.parsed.y.toLocaleString()}` } }
+                    },
+                    scales: {
+                        y: { 
+                            beginAtZero: true, 
+                            title: { display: true, text: 'Price (AED/sq ft)' },
+                            // Custom tick formatting for price
+                            ticks: { callback: function(value, index, ticks) { return value.toLocaleString(); } }
+                        },
+                        x: { 
+                            ticks: { 
+                                autoSkip: false, 
+                                maxRotation: 45, 
+                                minRotation: 45 
+                            } 
+                        }
+                    }
+                }
+            });
+        }
+        
+        window.onload = function() {
+            try {
+                // Populate the three-year table first
+                populateComparisonTable(infographicData);
+                // Initialize the chart
+                initializeCharts(infographicData);
+            } catch (e) {
+                document.getElementById('app-container').innerHTML = '<div class="text-red-600 p-8 text-center bg-white rounded-xl shadow-lg mt-10">Error: Could not load or process chart data. Please check the integrity of the provided data.</div>';
+                console.error("Error initializing app:", e);
+            }
+        };
+    </script>
+</body>
+</html>
