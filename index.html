@@ -32,7 +32,7 @@
         
         .chart-container {
             position: relative;
-            height: 400px; /* Fixed height for consistent chart display */
+            /* Removed fixed height: 400px; relying on Tailwind h-96 in HTML for responsiveness */
             width: 100%;
         }
     </style>
@@ -139,13 +139,13 @@
                 <span class="text-object1-secondary">🏆</span> Market Share Snapshot: Top 20 Developers
             </h2>
             <div class="bg-white p-6 rounded-2xl shadow-2xl">
-                <!-- Market Share Snapshot: Using aspect-square to force 1:1 ratio -->
-                <div class="w-full aspect-square bg-gray-200 flex items-center justify-center rounded-xl border-4 border-dashed border-object1-primary/50 overflow-hidden">
+                <!-- Market Share Snapshot: Removed aspect-square and added object-contain so the image displays fully without cropping. -->
+                <div class="w-full bg-gray-200 flex items-center justify-center rounded-xl border-4 border-dashed border-object1-primary/50 overflow-hidden p-4">
                     <img 
                         src="MS.png" 
                         alt="Market Share among 20 Developers" 
                         onerror="this.onerror=null; this.src='https://placehold.co/600x600/4f46e5/ffffff?text=Failed+to+Load+Market+Share+Image'" 
-                        class="w-full h-full object-cover"
+                        class="w-full h-auto max-h-[30rem] object-contain"
                     >
                 </div>
                 <p class="text-sm text-gray-600 mt-4 text-center font-medium">This visual highlights Object 1's growing market footprint against the top 20 established developers in Dubai.</p>
@@ -423,10 +423,10 @@
           ]
         };
         
-        // Global chart instances to allow destruction on redraw
-        let salesValueChartInstance;
-        let locationSalesChartInstance;
-        let avgPriceChartInstance;
+        // Global chart instances assigned to window object for proper cleanup
+        window.salesValueChartInstance = null;
+        window.locationSalesChartInstance = null;
+        window.avgPriceChartInstance = null;
 
 
         /**
@@ -611,7 +611,7 @@
             const metrics = data.object1Metrics;
             const years = data.years.map(y => y.toString());
 
-            // 1. Destroy existing charts if they exist
+            // 1. Destroy existing charts if they exist (Fixed: Check window object)
             if (window.salesValueChartInstance) { window.salesValueChartInstance.destroy(); }
             if (window.locationSalesChartInstance) { window.locationSalesChartInstance.destroy(); }
             if (window.avgPriceChartInstance) { window.avgPriceChartInstance.destroy(); }
@@ -825,5 +825,3 @@
     </script>
 </body>
 </html>
-
-
