@@ -61,7 +61,7 @@
                 <!-- 1. Total Sales Value -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-object1-primary hover:scale-[1.03] transition duration-300 transform">
                     <p class="text-sm font-medium text-gray-500">Total Sales Value</p>
-                    <p id="snapshot-SalesValue-value" class="text-2xl md:text-4xl font-bold text-object1-primary">AED 1.47 B</p>
+                    <p id="snapshot-SalesValue-value" class="text-2xl md:text-4xl font-bold text-object1-primary">Loading...</p>
                     <div class="flex items-center mt-2">
                         <span id="snapshot-SalesValue-change" class="text-xs md:text-base font-semibold text-green-600 mr-1 flex items-center">
                             <!-- Calculated: +170.01% -->
@@ -73,7 +73,7 @@
                 <!-- 2. Sales Volume (Oqood) -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-object1-secondary hover:scale-[1.03] transition duration-300 transform">
                     <p class="text-sm font-medium text-gray-500">Sales Volume (Oqood)</p>
-                    <p id="snapshot-Volume-value" class="text-2xl md:text-4xl font-bold text-object1-secondary">1,391 Units</p>
+                    <p id="snapshot-Volume-value" class="text-2xl md:text-4xl font-bold text-object1-secondary">Loading...</p>
                     <div class="flex items-center mt-2">
                         <span id="snapshot-Volume-change" class="text-xs md:text-base font-semibold text-green-600 mr-1 flex items-center">
                             <!-- Calculated: +121.85% -->
@@ -85,7 +85,7 @@
                 <!-- 3. Total Built-up Area -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-purple-500 hover:scale-[1.03] transition duration-300 transform">
                     <p class="text-sm font-medium text-gray-500">Total Built-up Area</p>
-                    <p id="snapshot-BuiltUpArea-value" class="text-2xl md:text-4xl font-bold text-purple-600">1.02 M sq ft</p>
+                    <p id="snapshot-BuiltUpArea-value" class="text-2xl md:text-4xl font-bold text-purple-600">Loading...</p>
                     <div class="flex items-center mt-2">
                         <span id="snapshot-BuiltUpArea-change" class="text-xs md:text-base font-semibold text-green-600 mr-1 flex items-center">
                             <!-- Calculated: +118.91% -->
@@ -97,7 +97,7 @@
                 <!-- 4. Total Sales Rank -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-object1-success hover:scale-[1.03] transition duration-300 transform">
                     <p class="text-sm font-medium text-gray-500">Total Sales Rank</p>
-                    <p id="snapshot-SalesRank-value" class="text-2xl md:text-4xl font-bold text-object1-success">#26</p>
+                    <p id="snapshot-SalesRank-value" class="text-2xl md:text-4xl font-bold text-object1-success">Loading...</p>
                     <div class="flex items-center mt-2">
                         <span id="snapshot-SalesRank-change" class="text-xs md:text-base font-semibold text-green-600 mr-1 flex items-center">
                             <!-- Calculated: Improved by 7 -->
@@ -109,7 +109,7 @@
                 <!-- 5. Avg. Price per Sq Ft -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-pink-500 hover:scale-[1.03] transition duration-300 transform">
                     <p class="text-sm font-medium text-gray-500">Avg. Price per Sq Ft</p>
-                    <p id="snapshot-AvgPriceSqFt-value" class="text-2xl md:text-4xl font-bold text-pink-600">AED 1,491</p>
+                    <p id="snapshot-AvgPriceSqFt-value" class="text-2xl md:text-4xl font-bold text-pink-600">Loading...</p>
                     <div class="flex items-center mt-2">
                         <span id="snapshot-AvgPriceSqFt-change" class="text-xs md:text-base font-semibold text-green-600 mr-1 flex items-center">
                             <!-- Calculated: +23.94% -->
@@ -120,7 +120,7 @@
             </div>
         </section>
 
-        <!-- New Section: Sales Value Growth Chart (Year-over-Year) -->
+        <!-- Section: Sales Value Growth Chart (Year-over-Year) -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-3 text-center md:text-left">
                 <span class="text-object1-primary">📈</span> Chart 1: Total Sales Value (AED Billion) 2023-2025
@@ -132,8 +132,26 @@
                 <p class="text-sm text-gray-600 mt-4 text-center">Visualizing the massive year-over-year increase in total sales value.</p>
             </div>
         </section>
+        
+        <!-- NEW SECTION: Market Share Among Top Developers (After Chart 1) -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-3 text-center md:text-left">
+                <span class="text-object1-secondary">🏆</span> Market Share Snapshot: Top 20 Developers
+            </h2>
+            <div class="bg-white p-6 rounded-2xl shadow-2xl">
+                <div class="w-full h-72 bg-gray-200 flex items-center justify-center rounded-xl border-4 border-dashed border-object1-primary/50 overflow-hidden">
+                    <img 
+                        src="https://placehold.co/1200x400/4f46e5/ffffff?text=PLACEHOLDER+IMAGE%3A+Market+Share+Visual&font=Inter" 
+                        alt="Market Share among 20 Developers" 
+                        onerror="this.onerror=null; this.src='https://placehold.co/1200x400/4f46e5/ffffff?text=Failed+to+Load+Market+Share+Image'" 
+                        class="w-full h-full object-cover"
+                    >
+                </div>
+                <p class="text-sm text-gray-600 mt-4 text-center font-medium">This visual highlights Object 1's growing market footprint against the top 20 established developers in Dubai.</p>
+            </div>
+        </section>
 
-        <!-- UPDATED SECTION: Sales Location Distribution Chart (Doughnut Chart) -->
+        <!-- Section: Sales Location Distribution Chart (Doughnut Chart) -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-3 text-center md:text-left">
                 <span class="text-object1-primary">🗺️</span> Chart 2: Object 1 Sales Distribution by Location (2025)
@@ -147,7 +165,42 @@
             </div>
         </section>
 
-        <!-- Chart 3: Market Positioning (formerly Chart 2) -->
+        <!-- NEW SECTION: Location-Specific Performance Ranks (After Chart 2) -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-3 text-center md:text-left">
+                <span class="text-object1-primary">🎯</span> Local Dominance: Rank by Unit Sales in Key Communities
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Image 1: JVT Rank -->
+                <div class="bg-white p-6 rounded-2xl shadow-2xl">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4 flex items-center"><span class="text-3xl mr-2 text-object1-success">#3</span> Top Developer in JVT</h3>
+                    <div class="w-full h-64 bg-gray-200 flex items-center justify-center rounded-xl overflow-hidden">
+                        <img 
+                            src="https://placehold.co/600x400/10b981/ffffff?text=JVT+RANK+%233+EVIDENCE&font=Inter" 
+                            alt="Developer Rank #3 in JVT" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/10b981/ffffff?text=Failed+to+Load+JVT+Rank+Image'" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4 text-center">Visual confirmation of Object 1's position as the third highest-selling developer by volume in Jumeirah Village Triangle.</p>
+                </div>
+                
+                <!-- Image 2: JVC Rank -->
+                <div class="bg-white p-6 rounded-2xl shadow-2xl">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4 flex items-center"><span class="text-3xl mr-2 text-object1-secondary">#6</span> Top Developer in JVC</h3>
+                    <div class="w-full h-64 bg-gray-200 flex items-center justify-center rounded-xl overflow-hidden">
+                        <img 
+                            src="https://placehold.co/600x400/f97316/ffffff?text=JVC+RANK+%236+EVIDENCE&font=Inter" 
+                            alt="Developer Rank #6 in JVC" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4 text-center">Evidence confirming the sixth highest-selling developer by volume in the competitive Jumeirah Village Circle market.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chart 3: Market Positioning -->
         <section class="mb-12">
             <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-3 text-center md:text-left">
                 <span class="text-object1-secondary">📍</span> Chart 3: Market Positioning - Avg Price per Sq Ft (2025)
@@ -158,6 +211,64 @@
                 </div>
                 <p class="text-sm text-gray-600 mt-4 text-center">Comparing Object 1's pricing strategy relative to key market developers.</p>
             </div>
+        </section>
+        
+        <!-- NEW SECTION: Investor Appreciation / Resale Transactions (After Chart 3) -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-3 text-center md:text-left">
+                <span class="text-pink-500">💰</span> Resale Success: Documented Investor Appreciation
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Resale 1 -->
+                <div class="bg-white p-4 rounded-xl shadow-lg border-t-4 border-pink-500">
+                    <div class="w-full h-40 bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden mb-3">
+                        <img 
+                            src="https://placehold.co/300x200/db2777/ffffff?text=RESALE+1+15%25+GAIN&font=Inter" 
+                            alt="Resale Transaction 1" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <p class="text-lg font-bold text-pink-600">Transaction 1</p>
+                    <p class="text-sm text-gray-700 font-medium">Gain: 15% in 8 months</p>
+                </div>
+                <!-- Resale 2 -->
+                <div class="bg-white p-4 rounded-xl shadow-lg border-t-4 border-pink-500">
+                    <div class="w-full h-40 bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden mb-3">
+                        <img 
+                            src="https://placehold.co/300x200/db2777/ffffff?text=RESALE+2+18%25+GAIN&font=Inter" 
+                            alt="Resale Transaction 2" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <p class="text-lg font-bold text-pink-600">Transaction 2</p>
+                    <p class="text-sm text-gray-700 font-medium">Gain: 18% in 10 months</p>
+                </div>
+                <!-- Resale 3 -->
+                <div class="bg-white p-4 rounded-xl shadow-lg border-t-4 border-pink-500">
+                    <div class="w-full h-40 bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden mb-3">
+                        <img 
+                            src="https://placehold.co/300x200/db2777/ffffff?text=RESALE+3+21%25+GAIN&font=Inter" 
+                            alt="Resale Transaction 3" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <p class="text-lg font-bold text-pink-600">Transaction 3</p>
+                    <p class="text-sm text-gray-700 font-medium">Gain: 21% in 12 months</p>
+                </div>
+                <!-- Resale 4 -->
+                <div class="bg-white p-4 rounded-xl shadow-lg border-t-4 border-pink-500">
+                    <div class="w-full h-40 bg-gray-200 flex items-center justify-center rounded-lg overflow-hidden mb-3">
+                        <img 
+                            src="https://placehold.co/300x200/db2777/ffffff?text=RESALE+4+13%25+GAIN&font=Inter" 
+                            alt="Resale Transaction 4" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <p class="text-lg font-bold text-pink-600">Transaction 4</p>
+                    <p class="text-sm text-gray-700 font-medium">Gain: 13% in 6 months</p>
+                </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-4 text-center">These transactions demonstrate the strong immediate appreciation potential for investors in Object 1 properties.</p>
         </section>
 
         <!-- Detailed Comparison Table (Now 3 years) -->
@@ -193,7 +304,7 @@
                     <!-- 1. Phone Icon (Contact) - NOW CLICKABLE -->
                     <p class="text-sm">
                         <!-- TEL link for phone number -->
-                        <a href="tel:+97150XXXXXXX" class="text-object1-primary font-bold inline-flex items-center hover:text-object1-secondary transition duration-150">
+                        <a href="tel:+971568722192" class="text-object1-primary font-bold inline-flex items-center hover:text-object1-secondary transition duration-150">
                             <!-- Phone Icon SVG (Lucide: Phone) -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 inline-block mr-1 align-middle"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 3.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             +971568722192
@@ -239,6 +350,7 @@
                 formatted = (num / 1e6).toFixed(2);
                 unit = ' M';
             } else {
+                // Default to a whole number with locale string if it's not a large number
                 formatted = Math.round(num).toLocaleString();
             }
 
@@ -633,15 +745,15 @@
             const object1Data = { "Name": "Object 1", "AvgPricePerSqFt2025": metrics.AvgPriceSqFt[2] };
             
             // Add Object 1 to the comparison data if it's not already there (prevents duplicates)
-            if (!developerData.find(d => d.Name === 'Object 1')) {
+            let obj1Index = developerData.findIndex(d => d.Name === 'Object 1');
+            if (obj1Index === -1) {
                  developerData.push(object1Data);
             } else {
                  // Ensure Object 1 data is updated if it was a placeholder
-                 const obj1Index = developerData.findIndex(d => d.Name === 'Object 1');
                  developerData[obj1Index] = object1Data;
             }
 
-            // Sort by AvgPricePerSqFt2025 to create a structured bar chart
+            // Sort by AvgPricePerSqFt2025 to create a structured bar chart (Descending)
             developerData.sort((a, b) => b.AvgPricePerSqFt2025 - a.AvgPricePerSqFt2025);
 
             const chartLabelsAvgPrice = developerData.map(d => d.Name);
@@ -707,7 +819,3 @@
     </script>
 </body>
 </html>
-
-
-
-
